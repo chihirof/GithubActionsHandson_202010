@@ -1,0 +1,12 @@
+name: Unit test
+
+on:
+  schedule:
+    - cron:  '45 6 17 10 *' #日本時間 10月17日15時45分
+
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo
+        run: echo This workflow is scheduled
