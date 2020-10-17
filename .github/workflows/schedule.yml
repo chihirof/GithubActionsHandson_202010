@@ -1,8 +1,8 @@
 name: schedule
 
 on:
-  schedule:
-    - cron:  '*/15 * * * *'
+  # schedule:
+  #   - cron:  '*/15 * * * *' #永遠に実行され続けるのでコメントアウト
 
 jobs:
   unittest:
