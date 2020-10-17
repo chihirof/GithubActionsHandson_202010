@@ -2,7 +2,7 @@ name: schedule
 
 on:
   schedule:
-    - cron:  '45 6 17 10 *' #日本時間 10月17日15時45分
+    - cron:  '*/15 * * * *'
 
 jobs:
   unittest:
