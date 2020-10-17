@@ -1,0 +1,21 @@
+name: Unit test
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: npm install
+        run: npm install
+
+      - name: npm test
+        run: npm test
+
+      - name: notify when fail
+        if: ${{ failure() }}
+        run: echo unit test fail
